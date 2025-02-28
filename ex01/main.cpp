@@ -6,7 +6,7 @@
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 17:06:47 by fzayani           #+#    #+#             */
-/*   Updated: 2025/02/27 19:03:35 by fzayani          ###   ########.fr       */
+/*   Updated: 2025/02/28 15:11:26 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,10 +107,6 @@ void testAnimalArray()
 // 	return 0;
 // }
 
-#include "Animal.hpp"
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "Brain.hpp"
 
 int main()
 {

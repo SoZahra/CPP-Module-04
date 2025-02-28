@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:22:23 by fzayani           #+#    #+#             */
-/*   Updated: 2025/02/28 15:30:53 by fzayani          ###   ########.fr       */
+/*   Created: 2025/02/25 17:06:43 by fzayani           #+#    #+#             */
+/*   Updated: 2025/02/28 19:25:45 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-#include "Animal.hpp"
-#include "Brain.hpp"
+#include <iostream>
 
-class Cat : public Animal{
+class Animal {
 
-	private:
-		Brain* brain;
+	protected :
+		std::string type;
 
 	public:
-		Cat();
-		Cat(const Cat& other);
-		~Cat();
-		Cat& operator=(const Cat& other);
+		Animal();
+		virtual ~Animal(); //virtuel
+		Animal(const Animal &other);
+		Animal& operator=(const Animal& other);
 
-		Brain* getBrain() const;
-		void setIdeas(int i, const std::string& idea);
-		std::string get_ideas(int i) const;
-		void* getAddress() const;
+		const std::string& getType() const;
+		void setType(std::string newType);
 
-		void makeSound() const;
+		virtual void makeSound() const = 0; //fonction virtuel pure 
 };
 
 

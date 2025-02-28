@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Wrong.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fzayani <fzayani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 14:22:23 by fzayani           #+#    #+#             */
-/*   Updated: 2025/02/28 15:30:53 by fzayani          ###   ########.fr       */
+/*   Created: 2025/02/26 14:44:14 by fzayani           #+#    #+#             */
+/*   Updated: 2025/02/26 19:02:24 by fzayani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 
 #include "Animal.hpp"
-#include "Brain.hpp"
+#include "iostream"
 
-class Cat : public Animal{
+class WrongAnimal{
 
-	private:
-		Brain* brain;
+	protected:
+		std::string type;
 
 	public:
-		Cat();
-		Cat(const Cat& other);
-		~Cat();
-		Cat& operator=(const Cat& other);
+		WrongAnimal();
+		WrongAnimal(const WrongAnimal& other); //copy
+		~WrongAnimal();
+		WrongAnimal& operator=(const WrongAnimal& other); //affection
 
-		Brain* getBrain() const;
-		void setIdeas(int i, const std::string& idea);
-		std::string get_ideas(int i) const;
-		void* getAddress() const;
-
+		const std::string& getType() const;
+		void setType(std::string newType);
 		void makeSound() const;
 };
-
 
 #endif
